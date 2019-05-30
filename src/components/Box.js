@@ -1,34 +1,51 @@
 import React from 'react'
 import EditDog from './EditDog'
 
-function Display(props) {
-    let { dog, edit, toggleEdit, updateDog } = props
-    return (
-        <div className="dog-card">
-            {edit ?
-                <EditDog 
-                dog={dog}
-                updateDog={updateDog} />
-                :
-                <div>
-            <h2>{dog.name}</h2>
-            <p><b>Breed:</b> {dog.breed}</p>
-            <p><b>Color:</b> {dog.color}</p>
-            <p><b>Vaccinated:</b> {dog.vaccinated}</p>
-            <ul><b>Favorite Things:</b>
-                <li>{dog.favoriteThings[0]}</li>
-                <li>{dog.favoriteThings[1]}</li>
-                <li>{dog.favoriteThings[2]}</li>
-            </ul>
+class Display extends React.Component {
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            edit: false
+        }
+    }
+
+    toggleEdit = () => {
+        this.setState({
+            edit: !this.state.edit
+        })
+    }
+
+    render() {
+        let { dog, updateDog } = this.props
+        return (
+            <div className="dog-card">
+                {this.state.edit ?
+                    <EditDog
+                        dog={dog}
+                        updateDog={updateDog}
+                        toggleEdit={this.toggleEdit} />
+                    :
+                    <div>
+                        <h2>{dog.name}</h2>
+                        <p><b>Breed:</b> {dog.breed}</p>
+                        <p><b>Color:</b> {dog.color}</p>
+                        <p><b>Vaccinated:</b> {dog.vaccinated}</p>
+                        <ul><b>Favorite Things:</b>
+                            {dog.favoriteThings.map((thing, i) => {
+                                return <p key={i}>{thing}</p>
+                            })}
+                        </ul>
+                    </div>
+                }
+                {this.state.edit ?
+                    <button onClick={this.toggleEdit}>cancel</button>
+                    :
+                    <button onClick={this.toggleEdit}>edit</button>
+                }
+                <button onClick={this.props.deleteDog}>delete</button>
             </div>
-            }
-            {edit ?
-                <button onClick={toggleEdit}>cancel</button>
-                :
-                <button onClick={toggleEdit}>edit</button>
-            }
-            <button onClick={props.deleteDog}>delete</button>
-        </div>
-    )
+        )
+    }
 }
 export default Display

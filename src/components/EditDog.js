@@ -3,7 +3,6 @@ import React, { Component } from 'react'
 class EditDog extends Component {
     constructor(props) {
         super(props)
-        console.log(this.props)
 
         let { name, breed, color, vaccinated, favoriteThings } = this.props.dog
         this.state = {
@@ -25,8 +24,8 @@ class EditDog extends Component {
 
     handleClick = () => {
         let updatedDog = {...this.props.dog, ...this.state}
-        console.log(1234, updatedDog)
         this.props.updateDog(updatedDog)
+        this.props.toggleEdit()
     }
 
     render() {

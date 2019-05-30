@@ -1,0 +1,13 @@
+.header{
+    display: flex;
+    border: 1px solid #4355fa;
+    background: #4355fa;
+    margin: 10px;
+    justify-content: inherit;
+    align-items: center;
+}
+
+.header img {
+    height: 50px;
+    margin: 0 20px 0 20px
+}

@@ -3,19 +3,7 @@ import Box from './Box'
 // import EditDog from './EditDog'
 
 class Dog extends Component {
-    constructor(props) {
-        super(props)
-
-        this.state = {
-            edit: false
-        }
-    }
-
-    toggleEdit = () => {
-        this.setState({
-            edit: !this.state.edit
-        })
-    }
+    
 
     render() {
         return (
@@ -25,9 +13,7 @@ class Dog extends Component {
                         <Box
                         key={dog.id}
                         dog={dog}
-                        edit={this.state.edit}
-                        toggleEdit={this.toggleEdit}
-                        deleteDog={this.props.deleteDog}
+                        deleteDog={() => this.props.deleteDog(dog.id)}
                         updateDog={this.props.updateDog}
                         />
                     )
