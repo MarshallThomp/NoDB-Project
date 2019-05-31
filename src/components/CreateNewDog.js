@@ -37,6 +37,14 @@ class CreateDog extends Component {
         }
         
         this.props.createDog(newDog)
+
+        this.setState({
+            name: '',
+            breed: '',
+            color: '',
+            vaccinated: '',
+            favoriteThings: '' 
+        })
     }
 
     render() {
@@ -68,14 +76,18 @@ class CreateDog extends Component {
                 onChange={this.handleChange}
                 value={this.state.color}
                 />
-                <input
+                <select
                 className="input vaccinated" 
                 type="text"
                 name="vaccinated"
                 placeholder="vaccinated"
                 onChange={this.handleChange}
                 value={this.state.vaccinated}
-                />
+                >
+                    <option>vaccinated</option>
+                    <option>yes</option>
+                    <option>no</option>
+                </select>
                 <input
                 className="input favoriteThings" 
                 type="text"

@@ -56,14 +56,18 @@ class EditDog extends Component {
                 onChange={this.handleChange}
                 value={this.state.color}
                 />
-                <input 
-                className="inputs vaccinated_edit"
+                <select
+                className="inputs vaccinated" 
                 type="text"
                 name="vaccinated"
                 placeholder="vaccinated"
                 onChange={this.handleChange}
                 value={this.state.vaccinated}
-                />
+                >
+                    <option>vaccinated</option>
+                    <option>yes</option>
+                    <option>no</option>
+                </select>
                 <input 
                 className="inputs favoriteThings_edit"
                 type="text"
