@@ -1,5 +1,7 @@
 import React from 'react'
 import EditDog from './EditDog'
+import './Box.css'
+
 
 class Display extends React.Component {
     constructor(props) {
@@ -28,22 +30,27 @@ class Display extends React.Component {
                     :
                     <div>
                         <h2>{dog.name}</h2>
+                        <div className="line"></div>
                         <p><b>Breed:</b> {dog.breed}</p>
                         <p><b>Color:</b> {dog.color}</p>
                         <p><b>Vaccinated:</b> {dog.vaccinated}</p>
-                        <ul><b>Favorite Things:</b>
+                        <p><b>Favorite Things:</b>
+                            <ul>
                             {dog.favoriteThings.map((thing, i) => {
-                                return <p key={i}>{thing}</p>
+                                return <li key={i}>{thing}</li>
                             })}
-                        </ul>
+                            </ul>
+                        </p>
                     </div>
                 }
-                {this.state.edit ?
-                    <button onClick={this.toggleEdit}>cancel</button>
-                    :
-                    <button onClick={this.toggleEdit}>edit</button>
-                }
-                <button onClick={this.props.deleteDog}>delete</button>
+                <div className="box-buttons">
+                    {this.state.edit ?
+                        <button className="box_cancel" onClick={this.toggleEdit}>cancel</button>
+                        :
+                        <button className="box_edit" onClick={this.toggleEdit}>edit</button>
+                    }
+                    <button className="delete" onClick={this.props.deleteDog}>delete</button>
+                </div>
             </div>
         )
     }

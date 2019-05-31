@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import './CreateNewDog.css'
+import paw from '../paw-solid.svg'
 
 class CreateDog extends Component {
     constructor(props) {
@@ -39,8 +41,11 @@ class CreateDog extends Component {
 
     render() {
         return(
-            <div>
-                <input 
+            <div >
+                <h2 className="addDog">Add Your Dog!</h2>
+                <div className="createDog-div">
+                <input
+                className="input name" 
                 type="text"
                 name="name"
                 placeholder="name"
@@ -48,6 +53,7 @@ class CreateDog extends Component {
                 value={this.state.name}
                 />
                 <input 
+                className="input breed"
                 type="text"
                 name="breed"
                 placeholder="breed"
@@ -55,27 +61,34 @@ class CreateDog extends Component {
                 value={this.state.breed}
                 />
                 <input 
+                className="input color"
                 type="text"
                 name="color"
                 placeholder="color"
                 onChange={this.handleChange}
                 value={this.state.color}
                 />
-                <input 
+                <input
+                className="input vaccinated" 
                 type="text"
                 name="vaccinated"
                 placeholder="vaccinated"
                 onChange={this.handleChange}
                 value={this.state.vaccinated}
                 />
-                <input 
+                <input
+                className="input favoriteThings" 
                 type="text"
                 name="favoriteThings"
                 placeholder="list: balls, ropes, old socks"
                 onChange={this.handleChange}
                 value={this.state.favoriteThings}
                 />
-                <button onClick={this.addDog}>Add Dog</button>
+                <button className="createDog-button" onClick={this.addDog}>
+                    <img className="button-icon" src={paw} alt=""/>
+                    Add Dog
+                    </button>
+                </div>
             </div>
         )
     }

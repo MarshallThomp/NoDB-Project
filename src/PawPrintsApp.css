@@ -5,14 +5,16 @@
 body {
   background-image: url('https://images.pexels.com/photos/551628/pexels-photo-551628.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: auto;
+  /* display: flex; */
+  font-family: 'Josefin Sans', sans-serif;
 }
 
-@keyframes App-logo-spin {
+/* @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
-}
+} */

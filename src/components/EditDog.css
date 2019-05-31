@@ -1,0 +1,19 @@
+.edit_dog{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.update{
+    border: 1px solid #4355fa;
+    border-radius: 10px;
+    padding: 5px;
+    width: 100px;
+    justify-content: center;
+    align-items: center;
+    background: #4355fa;
+    color: white;
+    margin: 20px;
+}

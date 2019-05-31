@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './EditDog.css'
 
 class EditDog extends Component {
     constructor(props) {
@@ -30,8 +31,9 @@ class EditDog extends Component {
 
     render() {
         return(
-            <div>
-                <input 
+            <div className="edit_dog">
+                <input
+                className="inputs name_edit" 
                 type="text"
                 name="name"
                 placeholder="name"
@@ -39,6 +41,7 @@ class EditDog extends Component {
                 value={this.state.name}
                 />
                 <input 
+                className="inputs breed_edit"
                 type="text"
                 name="breed"
                 placeholder="breed"
@@ -46,6 +49,7 @@ class EditDog extends Component {
                 value={this.state.breed}
                 />
                 <input 
+                className="inputs color_edit"
                 type="text"
                 name="color"
                 placeholder="color"
@@ -53,6 +57,7 @@ class EditDog extends Component {
                 value={this.state.color}
                 />
                 <input 
+                className="inputs vaccinated_edit"
                 type="text"
                 name="vaccinated"
                 placeholder="vaccinated"
@@ -60,13 +65,14 @@ class EditDog extends Component {
                 value={this.state.vaccinated}
                 />
                 <input 
+                className="inputs favoriteThings_edit"
                 type="text"
                 name="favoriteThings"
                 placeholder="list: balls, ropes, old socks"
                 onChange={this.handleChange}
                 value={this.state.favoriteThings}
                 />
-                <button onClick={this.handleClick}>Update Dog's Info</button>
+                <button className="update" onClick={this.handleClick}>Update Dog's Info</button>
             </div>
         )
     }

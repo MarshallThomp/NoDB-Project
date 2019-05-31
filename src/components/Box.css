@@ -1,0 +1,41 @@
+.dog-card {
+    display:flex;
+    flex-wrap: wrap;
+    border: 1px solid #4355fa;
+    width: 250px;
+    flex-direction: column;
+    margin: 20px;
+    color: black;
+    background: rgba(255, 255, 255, 0.5);
+    align-items: center;
+}
+
+.box_edit {
+    margin: 0 20px 10px 0;
+    border: 1px solid #4355fa;
+    border-radius: 10px;
+    padding: 5px;
+    width: 75px;
+    background: #4355fa;
+    color: white
+}
+
+.delete {
+    margin: 0 0 10px 20px;
+    border: 1px solid #4355fa;
+    border-radius: 10px;
+    padding: 5px;
+    width: 75px;
+    background: #4355fa;
+    color: white
+}
+
+.box_cancel {
+    margin: 0 20px 10px 0;
+    border: 1px solid #4355fa;
+    border-radius: 10px;
+    padding: 5px;
+    width: 75px;
+    background: #4355fa;
+    color: white
+}

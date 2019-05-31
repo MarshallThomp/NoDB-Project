@@ -1,0 +1,38 @@
+.addDog {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-decoration: underline black;
+}
+.createDog-div {
+    display: flex;
+    justify-content: space-around;
+    /* width: 100%; */
+    margin: 20px 200px;
+}
+
+.input {
+    border: 1px ridge #4355fa;
+    border-radius: 5px;
+    width: 100px;
+    justify-content: space-evenly;
+
+}
+
+.createDog-button {
+    border: 1px solid #4355fa;
+    border-radius: 10px;
+    padding: 5px;
+    width: 100px;
+    justify-content: center;
+    align-items: center;
+    background: #4355fa;
+    color: white
+}
+
+.button-icon{
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    
+}

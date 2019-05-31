@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import Box from './Box'
-// import EditDog from './EditDog'
+import './Dog.css'
 
 class Dog extends Component {
     
 
     render() {
         return (
-            <div>
+            <div className="container">
                 {this.props.dogs.map(dog => {
                     return(
                         <Box
