@@ -50,6 +50,7 @@ module.exports = {
     update: (req, res) => {
         let { id } = req.params
         let updatedDog = req.body
+        id = Number(id)
         updatedDog.id = id
 
         let index =dogs.findIndex(dog => +dog.id === +id)
