@@ -50,7 +50,7 @@ class CreateDog extends Component {
     render() {
         return(
             <div >
-                <h2 className="addDog">Add Your Dog!</h2>
+                <h2 className="addDog">Welcome to the Park!</h2>
                 <div className="createDog-div">
                 <input
                 className="input name" 

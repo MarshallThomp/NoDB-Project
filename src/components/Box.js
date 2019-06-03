@@ -28,19 +28,21 @@ class Display extends React.Component {
                         updateDog={updateDog}
                         toggleEdit={this.toggleEdit} />
                     :
-                    <div>
+                    <section>
                         <h2>{dog.name}</h2>
                         <div className="line"></div>
                         <p><b>Breed:</b> {dog.breed}</p>
                         <p><b>Color:</b> {dog.color}</p>
                         <p><b>Vaccinated:</b> {dog.vaccinated}</p>
                         <p><b>Favorite Things:</b></p>
+                        <ul>
                         {dog.name ? dog.favoriteThings.map((thing, i) => {
-                            return <p key={i}>{thing}
-                            </p>
+                            return <li key={i}>{thing}
+                            </li>
                                                   
                         }) : null}
-                    </div>
+                        </ul>
+                    </section>
                 }
                 <div className="box-buttons">
                     {this.state.edit ?
