@@ -36,3 +36,8 @@
     margin-right: 5px;
     
 }
+
+.createDog-button:hover {
+    background: white;
+    color: #4355fa
+}

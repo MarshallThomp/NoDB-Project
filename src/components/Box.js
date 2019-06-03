@@ -20,7 +20,6 @@ class Display extends React.Component {
 
     render() {
         let { dog, updateDog } = this.props
-        console.log(dog.favoriteThings)
         return (
             <div className="dog-card">
                 {this.state.edit ?
@@ -36,13 +35,11 @@ class Display extends React.Component {
                         <p><b>Color:</b> {dog.color}</p>
                         <p><b>Vaccinated:</b> {dog.vaccinated}</p>
                         <p><b>Favorite Things:</b></p>
-                        {dog.favoriteThings.map((thing, i) => {
-                            //  console.log(favoriteThings)
+                        {dog.name ? dog.favoriteThings.map((thing, i) => {
                             return <p key={i}>{thing}
-                            {/* {console.log(i)} */}
                             </p>
                                                   
-                        })}
+                        }) : null}
                     </div>
                 }
                 <div className="box-buttons">

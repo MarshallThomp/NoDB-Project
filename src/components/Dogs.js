@@ -29,7 +29,6 @@ class Dogs extends Component {
     }
 
     updateDog = dog => {
-        dog.favoriteThings = dog.favoriteThings.split(',')
         axios.put(`/api/dogs/${dog.id}`, dog).then(res => {
             this.setState({
                 dogs: res.data

@@ -49,12 +49,22 @@ module.exports = {
 
     update: (req, res) => {
         let { id } = req.params
-        let updatedDog = req.body
+        let { name, breed, color, vaccinated, favoriteThings } = req.body
         id = Number(id)
-        updatedDog.id = id
 
         let index =dogs.findIndex(dog => +dog.id === +id)
-        dogs.splice(index, 1, updatedDog)
+        let dog =dogs.find(dog => +dog.id === +id)
+
+        let updDog = {
+            id: dog.id, 
+            name: name || dog.name,
+            breed: breed || dog.breed,
+            color: color || dog.color,
+            vaccinated: vaccinated || dog.vaccinated,
+            favoriteThings: favoriteThings || dog.favoriteThings
+        }
+
+        dogs.splice(index, 1, updDog)
 
         res.send(dogs)
     },

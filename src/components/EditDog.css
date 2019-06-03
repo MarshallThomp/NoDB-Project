@@ -17,3 +17,8 @@
     color: white;
     margin: 20px;
 }
+
+.update:hover {
+    background: white;
+    color: #4355fa
+}

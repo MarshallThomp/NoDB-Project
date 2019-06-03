@@ -39,3 +39,18 @@
     background: #4355fa;
     color: white
 }
+
+.box_edit:hover {
+    background: white;
+    color: #4355fa
+}
+
+.delete:hover {
+    background: white;
+    color: #4355fa
+}
+
+.box_cancel:hover {
+    background: white;
+    color: #4355fa
+}

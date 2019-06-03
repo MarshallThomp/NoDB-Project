@@ -5,7 +5,7 @@
 body {
   background-image: url('https://images.pexels.com/photos/551628/pexels-photo-551628.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: 100%;
   /* display: flex; */
   font-family: 'Josefin Sans', sans-serif;
 }

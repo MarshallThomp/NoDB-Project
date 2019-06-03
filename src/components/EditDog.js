@@ -23,8 +23,18 @@ class EditDog extends Component {
         })
     }
 
+    handleFavorites = e => {
+        let { value, name } = e.target
+
+        let arr = value.split(',')
+        this.setState({
+            [name] : arr
+        })
+    }
+
     handleClick = () => {
         let updatedDog = {...this.props.dog, ...this.state}
+        console.log(updatedDog)
         this.props.updateDog(updatedDog)
         this.props.toggleEdit()
     }
@@ -73,7 +83,7 @@ class EditDog extends Component {
                 type="text"
                 name="favoriteThings"
                 placeholder="list: balls, ropes, old socks"
-                onChange={this.handleChange}
+                onChange={this.handleFavorites}
                 value={this.state.favoriteThings}
                 />
                 <button className="update" onClick={this.handleClick}>Update Dog's Info</button>
