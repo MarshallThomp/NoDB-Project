@@ -11,6 +11,9 @@ function App() {
         <Nav />
       </header>
       <Dogs />
+      <footer>
+        Marshall Thompson
+      </footer>
     </div>
   );
 }
